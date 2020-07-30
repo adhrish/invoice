@@ -1,0 +1,729 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            /* General */
+            body::-webkit-scrollbar{display: none;}
+            body{
+                height: 70vw;
+            }
+            /* fonts*/
+            @font-face
+            {
+                font-family: Einalight;
+                src: url("./fonts/Eina02-Light.ttf");
+                color: rgb(45,45,45);
+            }
+
+            @font-face
+            {
+                font-family: Einasemibold;
+                src: url("./fonts/Eina02-SemiBold.ttf");
+                font-weight: bold;
+                color: rgb(45,45,45);
+            }
+
+            @font-face
+            {
+                font-family: Einaregular;
+                src: url("./fonts/Eina02-Regular.ttf");
+                font-weight: 500; 
+                color: rgb(45,45,45);
+            }
+
+
+
+
+
+            /* heading */
+            .heading2vwsemibold{
+                font-size: 2vw;
+                font-family: "Einasemibold";
+            }
+
+            .heading15vwsemibold{
+                font-size: 1.5vw;
+                font-family: "Einasemibold";
+            }
+
+            .heading1vwsemibold{
+                font-size: 1vw;
+                font-family:"Einasemibold";
+            }	
+
+            .paragraph1vwregular {
+                font-size: 1vw;
+                font-family:"Einaregular";
+            }
+
+            .paragraph12vwregular {
+                font-size: 1.2vw;
+                font-family:"Einaregular";
+            }
+
+            .paragraph15vwregular {
+                font-size: 1.5vw;
+                font-family:"Einaregular";
+            }
+
+
+
+            /* textcolor */
+            .fadeblack{color:rgb(45,45,45);}
+            .whitesmoke{color:whitesmoke;}
+            .deepgrey{color:rgb(115, 115, 115)}
+
+            /* background fadeblack */
+            .fadeblackbackground{background-color: rgb(20,20,20);}
+
+            .purple{background-color:purple;}
+            .peach{background-color:crimson;}
+            .yellow{background-color:yellow;}
+            .lightgreen{background-color:lightgreen}
+            .skyblue{background-color:rgb(0, 110, 255);}
+
+            * {
+                margin:0;
+                padding:0;
+            }
+
+            header{
+                box-sizing: border-box;
+                height:15vw;
+                width:100vw;
+                padding: 5vw 5vw 0 5vw;
+            }
+
+                header .header-plate {
+                    height: 10vw;
+                    width: 90vw;
+                    display: flex;
+                    align-items: center;
+                }
+
+                    header .header-plate .logo-image {
+                        height: 10vw;
+                        width: 22vw;
+                    }
+                    
+                        header .header-plate .logo-image img {
+                            height: 10vw;
+                            width: 22vw;
+                        }
+                    
+                    header .header-plate .spacing {
+                        flex-grow: 1;
+                    }
+                    
+                    
+            #thankyou {
+                height:3vw;
+                width: 90vw;
+                margin: 5vw 5vw 0 5vw;
+            }   
+
+                #thankyou #text {
+                    height:3vw;
+                    width: 90vw;
+                }
+
+
+            #details {
+                height:20vw;
+                width:90vw;
+                margin: 5vw 5vw 0 5vw;
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+                #details .column {
+                    height: 20vw;
+                    width:42.5vw;
+                }
+
+                    #details .column .column-heading {
+                        position: relative;
+                        top:0;
+                        left:0;
+                        padding-left: 1vw;
+                        height: 2.5vw;
+                        width: 42.5vw;
+                        font-size: 1.2vw;
+                        display: flex;
+                        align-items: center;
+                        background-color: rgb(240, 234, 240);
+                        border-top: 3.5px solid rgb(145, 126, 145);
+                        border-bottom: 3.5px solid rgb(145, 126, 145);
+                    }
+
+                        #details .column .order-details-div{
+                            position: relative;
+                            top: 1vw;
+                            height: auto;
+                            width: 42.5vw;
+                        }
+                            #details .column .order-details-div .field {
+                                height: auto;
+                                width: 42.5vw;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                line-height: 2vw;
+                            }
+
+                            #details .column .order-details-div .field-heading {
+                                height: 2vw;
+                                width: 25%;                    
+                            
+                            }
+
+                            #details .column .order-details-div .field-details {
+                                height: 2.5vw;
+                                width: 75%;
+                            }
+
+                            #details .column .order-details-div #address{
+                                height: auto;
+                                line-height: 1.5vw;
+                            }
+
+
+            .item-details{
+                height:auto;
+                width: 90vw;
+                margin: 5vw 5vw 0 5vw;
+            }
+                .item-details .item-details-text {
+                        position: relative;
+                        top:0;
+                        left:0;
+                        padding-left: 1vw;
+                        height: 2.5vw;
+                        width: 90vw;
+                        font-size: 1.2vw;
+                        display: flex;
+                        align-items: center;
+                        background-color: rgb(240, 234, 240);
+                        border-top: 3.5px solid rgb(145, 126, 145);
+                        border-bottom: 3.5px solid rgb(145, 126, 145);
+                    }         
+
+                .item-details .item-details-heading{ 
+                    margin: 1vw 0 1vw 0;
+                    height: 2.5vw;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                    
+
+                    .item-details .item-details-heading .field{
+                        height: 2.5vw;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .item-details .item-details-heading .slno {
+                        height: 2.5vw;
+                        width: 10%;
+                    }
+                    
+                    .item-details .item-details-heading .HSNcode {
+                        height: 2.5vw;
+                        width: 10%;
+                    }
+
+                    .item-details .item-details-heading .item-desc {
+                        height: 2.5vw;
+                        width: 30%;
+                    }
+                    
+                    .item-details .item-details-heading .unit-price {
+                        height: 2.5vw;
+                        width: 10%;
+                    }
+
+                    .item-details .item-details-heading .qty {
+                        height: 2.5vw;
+                        width: 10%;
+                    }
+
+                    .item-details .item-details-heading .final-price {
+                        height: 2.5vw;
+                        width: 10%;
+                    }
+
+
+                    .item-details .item-details-heading{ 
+                    margin-top: 1vw;
+                    height: 2.5vw;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                    
+
+                    .item-details .item-details-heading .field{
+                        height: 2.5vw;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .item-details .item-details-heading .slno {
+                        height: 2.5vw;
+                        width: 10%;
+                    }
+                    
+                    .item-details .item-details-heading .HSNcode {
+                        height: 2.5vw;
+                        width: 10%;
+                    }
+
+                    .item-details .item-details-heading .item-desc {
+                        height: 2.5vw;
+                        width: 30%;
+                    }
+                    
+                    .item-details .item-details-heading .unit-price {
+                        height: 2.5vw;
+                        width: 10%;
+                    }
+
+                    .item-details .item-details-heading .qty {
+                        height: 2.5vw;
+                        width: 10%;
+                    }
+
+                    .item-details .item-details-heading .final-price {
+                        height: 2.5vw;
+                        width: 10%;
+                    }
+
+
+
+                    /* --------------------------------------------- */
+
+                    .item-details #items {
+                        margin-top: 0.5vw;
+                        height: 2.5vw;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 3.5px solid rgb(145, 126, 145);
+                    }
+                
+                        
+                
+                        .item-details #items .field{
+                            height: 2.5vw;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        
+                        .item-details #items .slno {
+                            height: 2.5vw;
+                            width: 10%;
+                        }
+                        
+                        .item-details #items .HSNcode {
+                            height: 2.5vw;
+                            width: 10%;
+                        }
+                
+                        .item-details #items .item-desc {
+                            height: 2.5vw;
+                            width: 30%;
+                        }
+                        
+                        .item-details #items .unit-price {
+                            height: 2.5vw;
+                            width: 10%;
+                        }
+                
+                        .item-details #items .qty {
+                            height: 2.5vw;
+                            width: 10%;
+                        }
+                
+                        .item-details #items .final-price {
+                            height: 2.5vw;
+                            width: 10%;
+                        }
+                
+
+
+            #total {
+                height: 20vw;
+                width: 90vw;
+                margin: 5vw 5vw 0 5vw;
+                display: flex;
+                flex-direction: column;    
+                justify-content: space-evenly;
+                align-items: flex-end;
+            }
+
+                #total .field {
+                    height:2vw;
+                    width: 25vw;
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }   
+
+                    #total .field .field-heading{
+                        height:2vw;
+                        width: 15vw;
+                        display:flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    #total .field .field-details{
+                        padding-right:0.5vw;
+                        height:2vw;
+                        width:10vw;
+                        display:flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                    }
+
+                    #total #grand-total{
+                        margin-top: 0.3vw;
+                        width: 90vw;
+                        height: 2.5vw;
+                        border-top : grey solid 3.5px;
+                        border-bottom : grey solid 3.5px;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                    }
+
+                    #total #grand-total .field .field-heading {
+                        color: rgb(23, 61, 23);
+                    }
+
+
+            footer {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+
+                footer .footer-text {    
+                    height: auto;
+                    width: 90vw;
+                    margin: 0 5vw 5vw 5vw;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                }
+
+                    footer .footer-text .section{
+                        height:1.5vw;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items:center;
+                    }
+
+                footer #circle-div{
+                    height:2vw;
+                    width:20vw;
+                    margin: 5vw;
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                } 
+
+                    footer #circle-div .circle{
+                        height:1vw;
+                        width:1vw;
+                        border-radius: 0.5vw;
+                    }                    
+    </style>
+    <title>INVOICE</title>
+</head>
+<body>
+
+
+    <header>
+        <div class="header-plate">
+            <div class="logo-image">
+                <img src="./images/Full_logo.svg"/>
+            </div>
+            <div class="spacing">
+
+            </div>
+            <div class="text heading2vwsemibold">
+                T A X&nbsp;&nbsp;I N V O I C E
+            </div>
+        </div>
+    </header>
+
+    <div id="thankyou">
+        <div id="text" class="paragraph15vwregular">
+            Thank you for doing business with Openly! Here are your order details:
+        </div>
+    </div>
+
+    
+    <div id ="details">
+        <div class="column">
+
+            <div class="column-heading heading15vwsemibold">
+                YOUR DETAILS
+            </div>
+
+            <div class="order-details-div">
+
+                <div class="field">
+                    <div class="field-heading heading1vwsemibold">Name</div>
+                    <div class="field-details paragraph1vwregular">Rishabh Adhana</div>
+                </div>
+
+                <div class="field">
+                    <div class="field-heading heading1vwsemibold">Mobile Number</div>
+                    <div class="field-details paragraph1vwregular">8296526106</div>
+                </div>
+
+                <div class="field" id="address">
+                    <div class="field-heading heading1vwsemibold" id="address-name">Delivery Address</div>
+                    <div class="field-details paragraph1vwregular" id = "address">No. 6, syn no 52-44 <br> Kalanagar main road <br>kammagondanahalli <br>bangalore </div>
+                </div>
+
+                <div class="field">
+                    <div class="field-heading heading1vwsemibold">Customer GSTIN</div>
+                    <div class="field-details paragraph1vwregular">?</div>
+                </div>
+
+                <div class="field">
+                    <div class="field-heading heading1vwsemibold">Customer ID</div>
+                    <div class="field-details paragraph1vwregular">?</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="column">
+
+            <div class="column-heading heading15vwsemibold">
+                ORDER DETAILS
+            </div>
+
+            <div class="order-details-div">
+                <div class="field">
+                    <div class="field-heading heading1vwsemibold">Order Date</div>
+                    <div class="field-details paragraph1vwregular">23 July, 2023</div>
+                </div>
+
+                <div class="field">
+                    <div class="field-heading heading1vwsemibold">Order Number</div>
+                    <div class="field-details paragraph1vwregular">8296526106</div>
+                </div>
+
+                <div class="field">
+                    <div class="field-heading heading1vwsemibold">Invoice Number</div>
+                    <div class="field-details paragraph1vwregular">8296526106</div>
+                </div>
+
+                <div class="field">
+                    <div class="field-heading heading1vwsemibold">Payments</div>
+                    <div class="field-details paragraph1vwregular">Rs 2309.00</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="item-details">
+
+        <div class="item-details-text heading15vwsemibold">
+            ITEM DETAILS
+        </div>
+
+        <div class = "item-details-heading heading1vwsemibold" >
+            <div class="field slno">
+                Sl No.
+            </div>
+            <div class="field HSNcode">
+                HSN code
+            </div>
+            <div class="field item-desc">
+                Item Description
+            </div>
+            <div class="field unit-price">
+                Unit Price
+            </div>
+            <div class="field qty">
+                Qty
+            </div>
+            <div class="field final-price">
+                Final Price
+            </div>
+        </div>
+
+        <div class = "item-details-heading paragraph1vwregular" id="items">
+            <div class="field slno">
+                1
+            </div>
+            <div class="field HSNcode">
+                6110
+            </div>
+            <div class="field item-desc">
+                Cadbury Dairy Milk Crackle - 28gm Pouch
+            </div>
+            <div class="field unit-price">
+                Rs 100.00
+            </div>
+            <div class="field qty">
+                2
+            </div>
+            <div class="field final-price">
+                Rs 200.00
+            </div>
+        </div>
+
+        <div class = "paragraph1vwregular" id="items">
+            <div class="field slno">
+                2
+            </div>
+            <div class="field HSNcode">
+                6110
+            </div>
+            <div class="field item-desc">
+                Cadbury Dairy Milk Crackle - 28gm Pouch
+            </div>
+            <div class="field unit-price">
+                Rs 100.00
+            </div>
+            <div class="field qty">
+                2
+            </div>
+            <div class="field final-price">
+                Rs 200.00
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div id="total">
+        <div class= "field">
+            <div class="field-heading heading1vwsemibold">
+                Total Price
+            </div>
+            <div class="field-details paragraph1vwregular">
+                Rs. 200
+            </div>            
+        </div>
+        <div class= "field">
+            <div class="field-heading heading1vwsemibold">
+                CGST
+            </div>
+            <div class="field-details paragraph1vwregular">
+                Rs. 6.80/-
+            </div>            
+        </div>
+        <div class= "field">
+            <div class="field-heading heading1vwsemibold">
+                SGST
+            </div>
+            <div class="field-details paragraph1vwregular">
+                Rs. 6.80/-
+            </div>            
+        </div>
+        <div class= "field">
+            <div class="field-heading heading1vwsemibold">
+                Store Charges
+            </div>
+            <div class="field-details paragraph1vwregular">
+                Rs. 20/-
+            </div>            
+        </div>
+        <div class= "field">
+            <div class="field-heading heading1vwsemibold">
+                Platform Charges
+            </div>
+            <div class="field-details paragraph1vwregular">
+                Rs. 10/-
+            </div>            
+        </div>
+        <div class= "field">
+            <div class="field-heading heading1vwsemibold">
+                Delivery Charges
+            </div>
+            <div class="field-details paragraph1vwregular">
+                Rs. 50/-
+            </div>            
+        </div>
+        <div class= "field">
+            <div class="field-heading heading1vwsemibold">
+                Discount Applied (FREEDEL)
+            </div>
+            <div class="field-details paragraph1vwregular">
+                -Rs.50/-
+            </div>            
+        </div>
+        <div id="grand-total">
+            <div class= "field">
+                <div class="field-heading heading1vwsemibold">
+                    Grand Total
+                </div>
+                <div class="field-details heading1vwsemibold">
+                    Rs. 335/-
+                </div>     
+            </div>       
+        </div>
+    </div>
+   
+
+
+    <footer class="fadeblackbackground whitesmoke">
+        <div id="circle-div">
+            <div class="circle purple"></div>
+            <div class="circle peach"></div>
+            <div class="circle yellow"></div>
+            <div class="circle lightgreen"></div>
+            <div class="circle skyblue"></div>
+        </div>
+        <div class="footer-text">
+            <div class="section paragraph12vwregular">
+                <div class="firstline">Keitai Technologies Pvt. ltd.</div>
+                <div class="secondline">GST:29AAFCK9821K2ZY</div>    
+            </div>
+            <div class="section paragraph12vwregular">
+                <div class="firstline">No.3, 14th Main, HSR Layout Sector 4,</div>
+                <div class="secondline">  Bengaluru, 560102, Karnataka, IN</div>       
+            </div>
+            <div class="section paragraph12vwregular">
+                <div class="firstline">Contact: +91 8277674965 <br> </div> 
+                <div class="secondline">Email: contact@buyopenly.com </div>                 
+            </div>
+        </div>
+    </footer>
+    
+
+
+
+</body>
+</html>
